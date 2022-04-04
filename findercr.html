@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>MAC Finder Tool</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Ano.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid">
+            <div class="filterable-products-block--text">
+                <div class="filterable-products-block--header">
+                    <h1>BUSCADOR DE TONO PARA LABIOS</h1>
+                </div>
+                <div class="filterable-products-block--subheader">
+                    <div class="filterable-products-block--subheader-wrapper">
+                        <p>¿Estás buscando tu nuevo tono de lipstick favorito? Descubre nuestro buscador de tonos para comparar colores y texturas en los diferentes tipos de piel.<br></p>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+            <div class="row">
+                <div class="col col-12 col-md-6 col-lg-3 pt-2">  <fieldset>
+    <legend>Filtrar por tono de piel</legend>
+      
+    <input type="radio" id="p" value="" v-model="piel">
+    <label class="label-option" for="p">Todo</label>
+      
+    <input type="radio" id="light" value="Light" v-model="piel">
+    <label class="skincontainer" for="light">
+      <span class="light"></span>
+    </label>
+   
+    <input type="radio" id="medium" value="Medium" v-model="piel">
+    <label class="skincontainer" for="medium">
+      <span class="medium"></span>
+    </label>
+    
+    <input type="radio" id="dark" value="Dark" v-model="piel">
+    <label class="skincontainer" for="dark">
+      <span class="dark"></span>
+    </label>       
+    
+  </fieldset></div>
+                <div class="col col-12 col-md-6 col-lg-3 pt-2">  <fieldset>
+    <legend>Filtrar por acabado</legend>
+    <input type="radio" id="acabado" value="" v-model="acabado">
+    <label class="label-option" for="acabado">Todo</label>
+    
+    <input type="radio" id="mate" value="Matte" v-model="acabado">
+    <label class="label-option" for="mate">Mate</label>
+    
+    <input type="radio" id="cream" value="Cream" v-model="acabado">
+    <label class="label-option" for="cream">Cream</label>
+ 
+    <input type="radio" id="shine" value="Shine" v-model="acabado">
+    <label class="label-option" for="shine">Shine</label>
+ 
+  </fieldset></div>
+                <div class="col-lg-6 col-12 pt-2">  <fieldset>
+    <legend>Filtrar por color</legend>
+    <input type="radio" id="color" value="" v-model="color">
+    <label class="label-option" for="color">Todo</label>
+ 
+    <input type="radio" id="berry" value="Berry" v-model="color">
+    <label class="label-option" for="berry">Berry</label>
+    
+    <input type="radio" id="nude" value="Nude" v-model="color">
+    <label class="label-option" for="nude">Nude</label>
+    
+    <input type="radio" id="orange" value="Orange" v-model="color">
+    <label class="label-option" for="orange">Orange</label>
+      
+    <input type="radio" id="pink" value="Pink" v-model="color">
+    <label class="label-option" for="pink">Pink</label>      
+      
+    <input type="radio" id="red" value="Red" v-model="color">
+    <label class="label-option" for="red">Red</label>  
+      
+    <input type="radio" id="brown" value="Brown" v-model="color">
+    <label class="label-option" for="brown">Brown</label>        
+    
+  </fieldset></div>
+            </div>
+        </div>
+        <div class="container-fluid py-5">
+            <div class="row no-gutter">
+                <div class="col-6 col-xs-6 col-md-4 col-lg-3 col-xl-2 px-0 py-0" v-for="list in filterList">
+                    <div class="hovereffect"><img class="img-fluid w-100" :src="list.img"><a :href="list.url" target="_blank">
+                            <div class="text-start card-img-overlay px-0"><span>{{list.title}}</span></div>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/finder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+    <script src="assets/js/findercr.js"></script>
+</body>
+
+</html>
